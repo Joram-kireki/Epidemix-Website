@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #5B8C51;
-    --secondary: #EDDD5E;
+    --primary: #088187;
+    --secondary: #ef8126;
     --light: #F7F7F7;
-    --dark: #404A3D;
+    --dark: #111;
 }
 
 .back-to-top {
@@ -185,7 +185,7 @@
 }
 
 .page-header {
-    background: url(../img/meningitis.jpg) center center no-repeat;
+    background: url(../img/meningitis-p.jpg) center center no-repeat;
     background-size: cover;
     background-position: top;
 }
@@ -200,6 +200,10 @@
     color: var(--light);
 }
 
+/**about**/
+.custom-br{
+    border-radius: 50%;
+}
 
 /*** Section Title ***/
 .section-title {
