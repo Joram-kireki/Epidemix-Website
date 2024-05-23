@@ -200,6 +200,15 @@
     color: var(--light);
 }
 
+/**resources boxes**/
+.custom-div{
+    height: 550px;
+    transition: 0.4s;
+}
+.custom-div:hover{
+    transform: translateY(-5px);
+}
+
 
 
 /*** Section Title ***/
@@ -421,4 +430,133 @@
     color: var(--light);
     letter-spacing: 1px;
     box-shadow: none;
+}
+ hr {
+            border:#526D82;
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+        body {
+            background-color: white; /* Set the background color of the entire page */
+        }
+/* 
+        .primary-text {
+            color: #27374D; /* Set the primary text color */
+        */
+.blog-post {
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.blog-img {
+    position: relative;
+}
+
+.blog-img img {
+    transition: transform 0.5s ease;
+}
+
+.blog-img:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blog-img:hover .overlay {
+    opacity: 1;
+}
+
+.blog-img .post-meta {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.resource-img .post-meta .read-more:hover {
+    color: #6dc77a !important;
+}
+
+.resource-post .content {
+    padding: 15px;
+}
+
+.resource-post .content h1, 
+.resource-post .content h2, 
+.resource-post .content h3, 
+.resource-post .content h4, 
+.resource-post .content h5, 
+.resource-post .content h6 {
+    line-height: 1.2;
+}
+
+.resource-post .content .title {
+    font-size: 18px;
+}
+
+.resource-post .content .title:hover {
+    color: #6dc77a !important;
+}
+
+.resource-post .content .author .name:hover {
+    color: #6dc77a !important;
+}
+
+.resource-post:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.resource-post:hover .resource-img .overlay {
+    opacity: 0.65;
+}
+
+.resource-post:hover .resource-img .post-meta {
+    opacity: 1;
+}
+
+.resource-post .post-meta .like i,
+.profile-post .like i {
+    -webkit-text-stroke: 2px #dd2427;
+    -webkit-text-fill-color: transparent;
+}
+
+.resource-post .post-meta .like:active i, 
+.resource-post .post-meta .like:focus i,
+.profile-post .like:active i,
+.profile-post .like:focus i {
+    -webkit-text-stroke: 0px #dd2427;
+    -webkit-text-fill-color: #dd2427;
+}
+
+.avatar.avatar-ex-sm {
+    height: 36px;
+}
+
+.shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.text-muted {
+    color: #8492a6 !important;
+}
+
+.para-desc {
+    max-width: 600px;
+}
+
+.section-title .title {
+    letter-spacing: 0.5px;
+    font-size: 30px;
 }
