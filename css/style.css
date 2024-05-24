@@ -200,9 +200,19 @@
     color: var(--light);
 }
 
+/**team**/
+.icon{
+    height: 30px;
+    width: 30px;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+.icon:hover{
+    transform: translateY(-5px);
+}
+
 /**resources boxes**/
 .custom-div{
-    height: 550px;
     transition: 0.4s;
 }
 .custom-div:hover{
