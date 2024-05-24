@@ -44,7 +44,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0">EPIDEMIX</h1>
+            <h1 class="m-0"><u>E</u>pidemix</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -52,10 +52,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="model.html" class="nav-item nav-link active">Model</a>
-                <a href="blog.html" class="nav-item nav-link">Blog</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="resource.html" class="nav-item nav-link">Resources</a>
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
             </div>
             <div class="border-start ps-4 d-none d-lg-block">
                 <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
@@ -68,72 +68,224 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">Model</h1>
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Modelling Meningitis</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                    <li class="breadcrumb-item active" aria-current="page">Meningitis</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
+    <div class="container">
+        <!-- <p class="section-title bg-white text-center text-primary px-3">S.I.R</p> -->
+        <h1 class="mb-5">Background Context - Mathematical Modelling</h1>
+        <p style="justify-content: space-evenly;">
+            Mathematical and computational models have become increasingly central in epidemiological research, and particularly for infectious diseases. 
+            Our solution is a system that bridges the gap between mathematical modelling and real-world problem domains to provide insights into how infection works in a population and gauge how intervention strategies (e.g. vaccination, treatment) can be used in the mix to counter infection. 
+            This would be used to make data-driven decisions or influence healthcare or lifestyle choices for individuals, agencies, organizations and even governments. In this context we use <strong>Agent-Based Modeling<strong>.
+        </p>
+        
+    </div>
+    
 
-    <!-- Service Start -->
+
+    <!-- Model Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-end">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title bg-white text-start pe-3" style="text-transform: none;">Extending SIR to SEIRs, or SVEIDRs </p>
+                    <h1 class="mb-4">Agent-Based Modelling</h1>
+                    <p>
+                        Think of Agent-Based Modeling as a system of computational models that simulate behavior of individual agents in order to study emergent phenomena - in terms of disease infection in a population. 
+                        Agents may represent humans, institutions, microorganisms, and disease vectors and so forth. 
+                        The agents’ actions are based on autonomous decision-making and other behavioral traits, implemented through formal rules of interaction in an environment. <br/>
+                        By simulating interactions at the individual level, ABMs provide a unique lens through which complex systems can be examined and understood. This modelling approach allows for manipulating numerous variables to create detailed scenarios, offering insights into how different vaccination strategies might perform under various epidemiological and social conditions. For example, ABMs can elucidate how age-specific vaccination thresholds affect herd immunity in localized populations or how interventions can be optimized in response to seasonal outbreak patterns.
+                        The strength of ABM lies in its ability to incorporate a diverse range of data inputs, from population mobility patterns to individual health records, thereby producing more realistic and applicable insights for public health strategies. This capability is particularly crucial in regions like the African meningitis belt, where the heterogeneity of population density, health infrastructure, and social practices can significantly alter disease transmission dynamics.
+
+                        Applying ABM in this domain is a promising avenue for achieving a deeper, more operationally relevant understanding of how best to deploy vaccines and other interventions. The ongoing development of such models is essential for tailoring public health responses to the unique challenges posed by meningitis in high-risk regions
+                    </p>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <h3>Components of a Simulation</h3>
+                    <div>
+                        <p><em>Agents</em>: Individual entities with specific characteristics and behaviors.<br/>
+                        <em>Environment</em>: The spatial and temporal context in which agents interact.<br/>
+                        <em>Rules</em>: The set of instructions governing agent behavior, interactions, and decision-making.<br/>
+                        <em>Emergence</em>: The phenomenon where complex system-level patterns and behaviors emerge from the interactions of individual agents.</p>
+                    </div>
+                    <div class="row g-2">
+                        <img class="img-fluid rounded" src="img/abm-agents.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Model End -->
+
+
+    <!-- SVEIDRS start -->
+    <div class="container container-xxl py-5">
+        <p class="section-title bg-white text-start pe-3" style="text-transform: none;">Extending SIR to SEIRs, or SVEIDRs </p>        <h1 class="mb-5">Our Methodology</h1>
+        <p style="justify-content: space-evenly;">
+            Our runtime framework leverages data from the World Health Organization (WHO) and to simulate the transmission dynamics of meningococcal meningitis in Nigeria. The model's development and simulations were executed using the <code>Starsim</code> Python package, a tool chosen for its robustness in handling complex epidemiological models and flexibility in integrating diverse data types.
+
+            The core of our simulation model is structured around the <strong>SVEIDRS</strong> (Susceptible, Vaccinated, Exposed, Infected, Recovered, Susceptible) paradigm, designed to capture the entire lifecycle of meningococcal disease transmission and immunity within a population. This model structure allows for delineating population segments based on their disease status, specifically focusing on vaccinated and recovered individuals, considering their potential for altered susceptibility and infectiousness.
+            
+            <br/>
+
+            The model incorporates detailed demographic and geographic distributions specific to Nigeria for now, reflecting variations in population density, age structure, and regional health disparities. These demographic layers simulate the localized impact of meningitis and the corresponding efficacy of vaccination programs across different community structures and urban-rural divides. <br/>
+            Key epidemiological parameters, such as contact, infection, and recovery rates, were meticulously derived from WHO reports, peer-reviewed studies, and historical health records. Each parameter was subjected to a rigorous calibration to align the model's output with real-world epidemiological data observed in Nigeria. Calibration involved adjusting these rates to reflect the natural progression of disease under current health interventions and to predict the potential impact of new vaccination strategies.
+            Empirical data were integrated to align the model with current epidemiological trends and healthcare practices. This involved synthesizing data on vaccination coverage, natural immunity levels, and rates of disease transmission within communities obtained from global health databases and national health surveys.
+
+        </p>
+        <div class="row g-2">
+            <img class="img-fluid rounded" src="img/SVEIDRs.png">
+        </div>
+        
+    </div>
+    <!-- SVEIDRS end -->
+
+
+    <!-- Model Features Start -->
+    <div class="container py-5">
+        <h2 class="mb-4">How It Works</h2>
+        <p class="mb-4">Our model accepts parameters like vaccination rates, vaccination probabilities and the number of people to simulate an environment and display visuals for insights</p>
+    </div>
+    <div class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src="img/meningitis.jpg">
+        <div class="container py-5">
+            <div class="row g-5">
+                                
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-4">
+                            <img class="img-fluid rounded" src="img/model_params.png" alt="">
+                        </div>
+                        <div class="col-sm-8">
+                            
+                            <h2 class="text-white mb-3">Model Paramters</h2>
+                            <p class="text-white mb-4">One can provide model parameters such as population size, infection rate, context-based probalities, to simulate the spread of meningococcal meningitis.</p>
+                            <!-- <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-4">
+                            <img class="img-fluid rounded" src="img/model_out.jpg" alt="">
+                        </div>
+                        <div class="col-sm-8">
+                            <h2 class="text-white mb-3">Impactive visuals</h2>
+                            <p class="text-white mb-4">Our solution graphically shows the role and impact of an intervention - for intuitive understanding of the dynamics driving the disease transmission.</p>
+                            <!-- <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Model Features End -->
+
+    </div>
+    <!-- Sim Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3" style="text-transform: none;">SVEIDRS is for INSIGHTS</p>
+                <h3 class="mb-5">Running the Simulation</h3>
+            </div> 
+            <div class="row gy-5 gx-4">
+                <!-- <p class="section-title bg-white text-center text-primary px-3">S.I.R</p> -->
+
+                <p style="justify-content: space-evenly;">
+                    The model funtionally runs multiple simulation scenarios in differing contexts to explore a range of vaccination strategies, including varying coverage levels, targeted demographic interventions, and phased rollout plans. These scenarios were designed to assess the threshold levels of vaccination needed to achieve herd immunity by 2030 and to determine the most cost-effective strategies for broad-scale implementation. 
+                    Implementation of Men5CV significantly reduced the transmission rates and disease incidence across various population segments.
+                </p>
+        </div>
+            <div style="color: #4CAF50; font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 24px; text-align: center; background-color: #f9f9f9; border: 2px solid #4CAF50; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <p class="mb-4">Why did the scatter plot break up with the line graph?</p>
+                <span>Because it found the line graph too predictable and wanted some space!</span>
+            </div>
+            <p>The visualizations below illustrate the reductions in disease spread and comparisons between different vaccination scenarios and the impact of treatment as well.</p>
+            <div class="row gx-4">
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/meningitis_dynamics.png" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Base-line Simulation</a>
+                            <span class="text-primary me-1">Infection spread</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/vaccine_whole_pop30.0.png" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Simulation environment with vaccination</a>
+                            <span class="text-primary me-1">Infections Averted</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/treatment_output_second.png" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Simulation environment with Treatment</a>
+                            <span class="text-primary me-1">Infections Averted</span>
+                            <!-- <span class="text-decoration-line-through">$29.00</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/prevalence.png" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Simulation Results</a>
+                            <span class="text-primary me-1">Prevalence Summary</span>
+                            <!-- <span class="text-decoration-line-through">Infections Averted</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sim End -->
+    
+    <!-- Verdict Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Our Services</p>
-                <h1 class="mb-5">Services That We Offer For Entrepreneurs</h1>
+                <p class="section-title bg-white text-center text-primary px-3">Our Say</p>
+                <h1 class="mb-5">Verdict of It</h1>
             </div>
             <div class="row gy-5 gx-4">
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="img/service-1.jpg" alt="">
-                            </div>
-                            <h5 class="mb-3">Best Animal Selection</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="img/service-2.jpg" alt="">
-                            </div>
-                            <h5 class="mb-3">Breeding & Veterinary</h5>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex h-100">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-text p-5 pt-0">
-                            <div class="service-icon">
-                                <img class="img-fluid rounded-circle" src="img/service-3.jpg" alt="">
-                            </div>
-                            <h5 class="mb-3">Care & Milking</h5>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    <!-- <p class="section-title bg-white text-center text-primary px-3">S.I.R</p> -->
+
+                    <p style="justify-content: space-evenly;">
+                        The working of out model underscores the potential of targeted vaccination strategies in significantly mitigating the meningitis burden, and by extension other infectious diseases.
+                        Unlike earlier models, the Epidemix solution provides a nuanced understanding of age-specific effects and geographical variations in vaccine impact.
+                        While the model offers detailed insights, its accuracy is contingent on the quality of input data and assumptions about population behavior.
+
+                        Wraps.
+
+                    </p>
             </div>
         </div>
     </div>
@@ -146,42 +298,54 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title bg-white text-start text-primary pe-3">Why Us!</p>
-                    <h1 class="mb-4">Few Reasons Why People Choosing Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Justo magna erat amet</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Clita erat ipsum et lorem et sit</p>
-                    <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="">Explore More</a>
+                    <h1 class="mb-4">Reasons Why People Choose Our Model!</h1>
+
+                    <p><i class="fa fa-check text-primary me-3"></i>Interactive and impactive visualizations for decisions</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Reasonable statistics for effective environment population evaluation</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Boost immunity for population against infection</p>
+                    <p style="
+                    color: #492f5a; 
+                    font-family: 'Comic Sans MS', cursive, sans-serif; 
+                    font-size: 24px; 
+                    text-align: center; 
+                    background: linear-gradient(145deg, #f9f9f9, #e0e0e0); 
+                    border: 2px solid #125a14; 
+                    padding: 10px; 
+                    border-radius: 10px; 
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); 
+                    transform: perspective(500px) rotateX(10deg);
+                ">See our model figures, in percentages, on your right</p>
+                
                 </div>
                 <div class="col-lg-6">
                     <div class="rounded overflow-hidden">
                         <div class="row g-0">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="text-center bg-primary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/experience.png" alt="">
-                                    <h1 class="display-6 text-white" data-toggle="counter-up">25</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Years Experience</span>
+                                <div class="text-center py-5 px-4" style="background-color: #B71C1C;">
+                                    <img class="img-fluid mb-4" src="img/threats_min.svg" alt="">
+                                    <h1 class="display-6 text-white" data-toggle="counter-up">10</h1>
+                                    <span class="fs-5 fw-semi-bold text-secondary">Threats minimized</span>
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="text-center bg-secondary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/award.png" alt="">
-                                    <h1 class="display-6" data-toggle="counter-up">183</h1>
-                                    <span class="fs-5 fw-semi-bold text-primary">Award Winning</span>
+                                <div class="text-center py-5 px-4" style="background-color: #36537e;">
+                                    <img class="img-fluid mb-4" src="img/lowered_deaths.svg" alt="">
+                                    <h1 class="display-6" data-toggle="counter-up">15</h1>
+                                    <span class="fs-5 fw-semi-bold text-primary">Lowered Deaths</span>
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="text-center bg-secondary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/animal.png" alt="">
-                                    <h1 class="display-6" data-toggle="counter-up">2619</h1>
-                                    <span class="fs-5 fw-semi-bold text-primary">Total Animals</span>
+                                <div class="text-center py-5 px-4" style="background-color: #E65100;">
+                                    <img class="img-fluid mb-4" src="img/reduced_exposure.svg" alt="">
+                                    <h1 class="display-6" data-toggle="counter-up">20</h1>
+                                    <span class="fs-5 fw-semi-bold text-primary">Reduced Exposure</span>
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="text-center bg-primary py-5 px-4">
-                                    <img class="img-fluid mb-4" src="img/client.png" alt="">
-                                    <h1 class="display-6 text-white" data-toggle="counter-up">51940</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Happy Clients</span>
+                                <div class="text-center py-5" style="background-color: #1B5E20;">
+                                    <img class="img-fluid mb-4" src="img/recoveries.svg" alt="">
+                                    <h1 class="display-6 text-white" data-toggle="counter-up">17</h1>
+                                    <span class="fs-5 fw-semi-bold text-secondary">Recoveries</span>
                                 </div>
                             </div>
                         </div>
@@ -194,67 +358,99 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+    <div class="">
+        <!-- Footer -->
+        <footer
+                class="text-center text-lg-start text-white"
+                style="background-color: #1c2331"
+                >
+          <!-- Section: Social media -->
+          <section
+                   class="d-flex justify-content-between p-4"
+                   style="background-color: #6351ce"
+                   >
+            <!-- Left -->
+            <div class="me-5">
+              <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+      
+            <!-- Right -->
+            <div>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-facebook-f"><i class="bi bi-facebook"></i></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-github"></i>
+              </a>
+            </div> 
+            <!-- Right -->
+  
+          </section>
+          <!-- Section: Social media -->
+          
+          <!-- Section: Links  -->
+          <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <!-- Epidemix Column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-0 pt-0 epidemix-section">
+                      <h6 class="text-uppercase fw-bold epidemix-title" >Epidemix</h6>
+                      <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                      <!-- SEIR Animation Section -->
+                      <div id="seirAnimation"></div>
+                  </div>
+                    <!-- Other columns -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Products</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="#!" class="text-white">IDM -starsim</a></p>
+                        <p><a href="#!" class="text-white">IDM -starsim</a></p>
+                        <p><a href="#!" class="text-white">IDM -starsim</a></p>
+                        <p><a href="#!" class="text-white">IDM -starsim</a></p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Business Hours</h5>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="#!" class="text-white">Your Account</a></p>
+                        <p><a href="#!" class="text-white">Become an Affiliate</a></p>
+                        <p><a href="#!" class="text-white">Shipping Rates</a></p>
+                        <p><a href="#!" class="text-white">Help</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i> Juja, NRB 10012, JKUAT</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 254 725 173 705</p>
+                        <p><i class="fas fa-print mr-3"></i> + 254 725 173 70</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-secondary text-body copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
+        </section>
+          <div
+               class="text-center p-3"
+               style="background-color: rgba(0, 0, 0, 0.2)"
+               >
+            © 2024 Copyright:
+            <a class="text-white" href="https://Epidemix.com/"
+               >Epidemix.com</a
+              >
+          </div>
+        </footer>
+    <!-- Footer  End -->
 
 
     <!-- Back to Top -->
@@ -271,6 +467,7 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
