@@ -600,9 +600,21 @@
     letter-spacing: 0.5px;
     font-size: 30px;
 }
-h1{
+h1,h2,h3,h4,h5{
     color: #111;
 }
-p{
+p,span{
     color: #2a2828;
+}
+.btn-color{
+    background-color: #088187;
+}
+.bi{
+    color: white;
+}
+.fa-check{
+    color: #088187;
+}
+.mytext{
+    color: #088187;
 }
