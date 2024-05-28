@@ -611,7 +611,7 @@ transition: 100ms ease-in !important;
 h1,h2,h3,h4,h5{
     color: #111;
 }
-p,span{
+p{
     color: #2a2828;
     font-weight: 500;
 }
@@ -635,4 +635,7 @@ p,span{
     padding: 10px; border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
+}
+.footertext{
+    color: white;
 }
