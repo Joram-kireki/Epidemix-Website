@@ -16,6 +16,7 @@
 .readmore {
     font-size: 20px;
     font-weight: 500;
+    color: #111;
     }
 .fw-bold {
     font-weight: 700 !important;
@@ -29,8 +30,8 @@
     font-weight: 500 !important;
 }
 .readmore:hover{
-color:white !important;
-background-color: #17331b !important;
+color:#111 !important;
+background-color: #3b0b5e42 !important;
 transition: 100ms ease-in !important;
 }
 
@@ -612,6 +613,7 @@ h1,h2,h3,h4,h5{
 }
 p,span{
     color: #2a2828;
+    font-weight: 500;
 }
 .btn-color{
     background-color: #088187;
@@ -624,4 +626,13 @@ p,span{
 }
 .mytext{
     color: #088187;
+}
+.info{
+    color: #4CAF50; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    font-size: 24px; text-align: center; 
+    background-color: #f9f9f9; border: 2px solid #4CAF50;; 
+    padding: 10px; border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
