@@ -13,7 +13,10 @@
     bottom: 30px;
     z-index: 99;
 }
-
+.readmore {
+    font-size: 20px;
+    font-weight: 500;
+    }
 .fw-bold {
     font-weight: 700 !important;
 }
@@ -25,7 +28,11 @@
 .fw-semi-bold {
     font-weight: 500 !important;
 }
-
+.readmore:hover{
+color:white !important;
+background-color: #17331b !important;
+transition: 100ms ease-in !important;
+}
 
 /*** Spinner ***/
 #spinner {
