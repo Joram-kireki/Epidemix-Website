@@ -227,6 +227,7 @@
     display: inline-block;
     text-transform: uppercase;
     font-weight: 600;
+    color: #088187;
 }
 
 .section-title::before {
@@ -569,4 +570,10 @@
 .section-title .title {
     letter-spacing: 0.5px;
     font-size: 30px;
+}
+h1{
+    color: #111;
+}
+p{
+    color: #2a2828;
 }
